@@ -1,0 +1,27 @@
+# Applied Claude Patterns
+
+Production patterns for building Claude-powered operational tooling at scale.
+
+These are extracted from real deployments — AI assistants serving hundreds of field operators, multi-tenant platforms deployed across enterprise clients, and consumer mobile apps built on the same backend. Sanitized for public use.
+
+## Who This Is For
+
+Engineers building Claude into production systems, not demos. Every pattern here has been stress-tested against real operational workflows: field operations, fleet management, safety compliance, supervisor reporting. The constraints are different from consumer AI — uptime matters, citations matter, tenant isolation matters, and hallucinated procedures are a liability, not just an annoyance.
+
+## Patterns
+
+| Pattern | Problem Solved |
+|---|---|
+| [Universal Streaming Endpoint](patterns/universal-endpoint.md) | One backend serving N AI products with zero code duplication |
+| [RAG with Native Citations](patterns/citations-rag.md) | Grounded answers with traceable sources — no hallucinated procedures |
+| [Config-Driven Multi-Tenancy](patterns/multi-tenant-config.md) | Single codebase, N clients, isolated and branded per deployment |
+| [Cross-Tenant Isolation Testing](patterns/cross-tenant-isolation.md) | Prove data never leaks between clients in CI |
+
+## Stack
+
+These patterns are implemented in TypeScript on Vercel serverless functions. The RAG patterns use Supabase + pgvector. The isolation tests run in Vitest. Swap the infrastructure layer and the patterns hold.
+
+## Author
+
+Jeremy Odam — [jeremyodam.com](https://jeremyodam.com)  
+25 years in regulated utility operations. Building AI-augmented operational tooling.
