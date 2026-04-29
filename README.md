@@ -21,6 +21,16 @@ Engineers building Claude into production systems, not demos. Every pattern here
 
 These patterns are implemented in TypeScript on Vercel serverless functions. The RAG patterns use Supabase + pgvector. The isolation tests run in Vitest. Swap the infrastructure layer and the patterns hold.
 
+## Dev Setup
+
+If you're working with these patterns in Claude Code and your stack touches Google Cloud, install the official GCP skills for better context on current API syntax:
+
+```bash
+npx skills install github.com/google/skills
+```
+
+Recommended: `bigquery-basics`, `cloud-run-basics`, `google-cloud-recipe-auth`, and the three WAF pillars (security, reliability, cost-optimization). Install globally + symlink so updates pull automatically.
+
 ## Author
 
 Jeremy Odam — [jeremyodam.com](https://jeremyodam.com)  
