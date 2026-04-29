@@ -2,7 +2,7 @@
 
 ## Problem
 
-Field operators asking an AI assistant about safety procedures need to trust the answer. "According to the model" is not good enough. They need to know which document, which section, which page. Hallucinated procedures in regulated operations are a liability.
+Workers in regulated environments asking an AI assistant about safety procedures need to trust the answer. "According to the model" is not good enough. They need to know which document, which section, which page. Hallucinated procedures are a liability.
 
 Anthropic's Native Citations API solves this at the model level — Claude identifies exactly which source chunks support each claim in its response. No prompt engineering required. No post-processing regex to extract fake citations.
 
@@ -170,7 +170,7 @@ function renderResponseWithCitations(content: ContentBlock[]) {
 
 Prompt-engineered citations ("always cite your sources") produce hallucinated references. The model makes up plausible-sounding document names and page numbers when the real source isn't clearly present in context.
 
-Native Citations works differently — Claude only cites chunks that were actually passed in the `documents` array. It cannot fabricate a citation to a document it wasn't given. For regulated operations (NFPA 54, NFPA 58, 49 CFR 192, company SOPs), this is the difference between a useful tool and a liability.
+Native Citations works differently — Claude only cites chunks that were actually passed in the `documents` array. It cannot fabricate a citation to a document it wasn't given. For regulated operations where procedures carry legal or safety weight, this is the difference between a useful tool and a liability.
 
 ## Tradeoffs
 

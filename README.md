@@ -2,11 +2,11 @@
 
 Production patterns for building Claude-powered operational tooling at scale.
 
-These are extracted from real deployments — AI assistants serving hundreds of field operators, multi-tenant platforms deployed across enterprise clients, and consumer mobile apps built on the same backend. Sanitized for public use.
+These are extracted from real deployments — AI assistants serving enterprise operational teams, multi-tenant platforms deployed across enterprise clients, and consumer mobile apps built on the same backend. Sanitized for public use.
 
 ## Who This Is For
 
-Engineers building Claude into production systems, not demos. Every pattern here has been stress-tested against real operational workflows: field operations, fleet management, safety compliance, supervisor reporting. The constraints are different from consumer AI — uptime matters, citations matter, tenant isolation matters, and hallucinated procedures are a liability, not just an annoyance.
+Engineers building Claude into production systems, not demos. Every pattern here has been stress-tested against real operational workflows across regulated industries. The constraints are different from consumer AI — uptime matters, citations matter, tenant isolation matters, and hallucinated answers are a liability, not just an annoyance.
 
 ## Patterns
 

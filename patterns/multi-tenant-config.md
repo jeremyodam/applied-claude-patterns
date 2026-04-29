@@ -101,7 +101,7 @@ export async function provisionClient(config: ClientProvisionConfig) {
 
 // Example: onboard a new client in 10 lines
 await provisionClient({
-  orgId: "acme-utilities",
+  orgId: "acme-corp",
   name: "ACME Utilities",
   primaryColor: "#dc2626",
   modules: [
@@ -112,9 +112,9 @@ await provisionClient({
     },
     {
       module: "safety",
-      systemPrompt: "You are a safety compliance assistant grounded in NFPA 54...",
+      systemPrompt: "You are a safety compliance assistant grounded in applicable industry safety standards...",
       ragEnabled: true,
-      ragNamespace: "acme-utilities:safety",
+      ragNamespace: "acme-corp:safety",
     },
   ],
 });
@@ -181,7 +181,7 @@ export function applyClientBranding(config: ClientConfig) {
 One Vercel project. One Supabase project. Client is identified by:
 - Subdomain (`acme.yourplatform.com`) resolved at the edge
 - API key header scoped to `org_id` at auth time
-- Or path prefix (`/app/acme-utilities/`) for simpler setups
+- Or path prefix (`/app/acme-corp/`) for simpler setups
 
 All three patterns set `orgId` before any DB call. RLS does the rest.
 
