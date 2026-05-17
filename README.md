@@ -17,6 +17,7 @@ Engineers building Claude into production systems, not demos. Every pattern here
 | [Config-Driven Multi-Tenancy](patterns/multi-tenant-config.md) | Single codebase, N clients, isolated and branded per deployment |
 | [Cross-Tenant Isolation Testing](patterns/cross-tenant-isolation.md) | Prove data never leaks between clients in CI |
 | [17 Prompt Engineering Patterns](patterns/prompt-engineering-patterns.md) | Full system prompt architecture — from Persona to Few-Shot, all with production examples |
+| [Skills + Files API + Remote MCP](patterns/skills-files-remote-mcp.md) | Onboard a new enterprise client in an afternoon — composing the May 2026 Anthropic beta surface |
 
 ## Stack
 
