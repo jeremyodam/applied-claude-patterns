@@ -163,22 +163,22 @@ export async function provisionClient(input: ProvisionInput): Promise<void> {
 
 // --- Example: onboard a new utility client ---
 await provisionClient({
-  orgId:        'nw-utilities',
-  name:         'NW Utilities Inc.',
+  orgId:        'acme-utility',
+  name:         'Acme Utility Co.',
   primaryColor: '#0f4c81',
   plan:         'enterprise',
   modules: [
     {
       module:       'field-ops',
-      systemPrompt: `You are FieldBuddy, an AI field operations assistant for NW Utilities.
+      systemPrompt: `You are FieldBuddy, an AI field operations assistant for Acme Utility.
 You help technicians look up work orders, interpret asset readings, and escalate
-safety concerns. You have access to the NW Utilities procedure manual. Always cite
+safety concerns. You have access to the Acme Utility procedure manual. Always cite
 the specific procedure number when referencing a documented process.`,
       ragEnabled: true,
     },
     {
       module:       'safety',
-      systemPrompt: `You are SafetyBuddy for NW Utilities. You enforce OSHA and
+      systemPrompt: `You are SafetyBuddy for Acme Utility. You enforce OSHA and
 utility-specific safety protocols. When a technician describes a task, identify
 applicable safety requirements and required PPE before they proceed. If a task
 involves confined space entry or energized equipment, require supervisor sign-off.`,
@@ -343,4 +343,4 @@ Without this constraint, running the provisioning script twice on the same clien
 
 ## Real-World Note
 
-This pattern is the foundation of the BuddyOS platform. The same codebase currently serves NW Natural (FieldBuddy + InventoryBuddy pilot), multiple standalone product users (GarageBuddy, GuitarBuddy, PoolAndSpaBuddy), and internal development tenants — all from a single Vercel deployment backed by one Supabase project. Adding a new enterprise client takes one provisioning script run and a DNS CNAME if they want a custom subdomain. The entire onboarding takes under 30 minutes including the client call.
+This pattern is the foundation of the BuddyOS platform. The same codebase currently serves multiple standalone product users (GarageBuddy, GuitarBuddy, PoolAndSpaBuddy) alongside internal development tenants — all from a single Vercel deployment backed by one Supabase project. Adding a new enterprise client takes one provisioning script run and a DNS CNAME if they want a custom subdomain. The entire onboarding takes under 30 minutes including the client call.
